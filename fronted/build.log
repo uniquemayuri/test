@@ -1,0 +1,15 @@
+(node:11489) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Creating an optimized production build...
+Failed to compile.
+
+TS7006: Parameter 'e' implicitly has an 'any' type.
+    82 |             <HomeIcon />
+    83 |           </IconButton>
+  > 84 |           <Button color="inherit" onClick={(e) => handleProtectedClick(e, 'ファイル')} component={Link as any} to="/files">ファイル</Button>
+       |                                             ^
+    85 |           <Button color="inherit" onClick={(e) => handleProtectedClick(e, 'アップロード')} component={Link as any} to="/upload">アップロード</Button>
+    86 |           <Button color="inherit" onClick={(e) => handleProtectedClick(e, 'アカウント')} component={Link as any} to="/account-info">アカウント</Button>
+    87 |           <Button color="inherit" onClick={(e) => handleProtectedClick(e, 'ユーザー一覧')} component={Link as any} to="/users">ユーザー</Button>
+
+

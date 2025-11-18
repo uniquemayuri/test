@@ -1,0 +1,646 @@
+INFO:     Will watch for changes in these directories: ['/home/t9413128/loginaccountsystem/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [4555] using StatReload
+2025-11-17 09:21:34,951 - app.core.config - INFO - 数据库连接: postgresql+psycopg2://t9413128:***@localhost:5433/db1
+INFO:     Started server process [4558]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:41232 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41242 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+2025-11-17 09:23:00,824 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-17 09:23:00,824 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:41242 - "GET /auth/me HTTP/1.1" 401 Unauthorized
+2025-11-17 09:23:00,834 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-17 09:23:00,834 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:41232 - "GET /auth/me HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:55306 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55306 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+2025-11-17 09:26:40,880 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:     127.0.0.1:51754 - "POST /auth/register HTTP/1.1" 200 OK
+2025-11-17 09:26:49,204 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 00:56:49.204564
+INFO:     127.0.0.1:54298 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43692 - "OPTIONS /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43692 - "POST /auth/register HTTP/1.1" 200 OK
+2025-11-17 09:28:51,282 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 00:58:51.281861
+INFO:     127.0.0.1:43704 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43704 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43704 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+2025-11-17 09:28:52,679 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:58308 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58308 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43704 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58308 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43704 - "GET /api/account-info/users HTTP/1.1" 200 OK
+2025-11-17 09:28:56,441 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:43704 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-17 09:28:56,496 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:43704 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59300 - "OPTIONS /api/account-info/avatar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59300 - "POST /api/account-info/avatar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59300 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+2025-11-17 09:29:07,383 - app.core.config - ERROR - 数据库操作出错: [{'type': 'int_parsing', 'loc': ('body', 'age'), 'msg': 'Input should be a valid integer, unable to parse string as an integer', 'input': ''}]
+INFO:     127.0.0.1:59310 - "PUT /api/account-info/ HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:39154 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39160 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39154 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39160 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40232 - "OPTIONS /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40232 - "POST /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40232 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40232 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50014 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40232 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40232 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40232 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40232 - "GET /upload/list HTTP/1.1" 200 OK
+2025-11-17 09:30:55,052 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 01:00:55.051809
+INFO:     127.0.0.1:33576 - "POST /auth/login HTTP/1.1" 200 OK
+2025-11-17 09:31:50,415 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 01:01:50.415107
+INFO:     127.0.0.1:53222 - "POST /auth/login HTTP/1.1" 200 OK
+2025-11-17 09:31:50,457 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:53234 - "PUT /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48802 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48812 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48802 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48812 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48802 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48812 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48828 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:34906 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34906 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34922 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34930 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:34906 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46104 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-17 09:35:09,186 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 01:05:09.186432
+INFO:     127.0.0.1:46104 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46104 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46104 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46110 - "POST /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46110 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46110 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46110 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46110 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46110 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46110 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46110 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46110 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56330 - "POST /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56330 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56330 - "GET /api/account-info/users HTTP/1.1" 200 OK
+2025-11-17 09:38:03,336 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 01:08:03.336426
+INFO:     127.0.0.1:37702 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37702 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-17 09:38:05,420 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:37702 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-17 09:38:46,334 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:60580 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-17 09:38:46,350 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:60580 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47038 - "OPTIONS /api/account-info/avatar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47038 - "POST /api/account-info/avatar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47038 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47042 - "POST /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47038 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47042 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47042 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47038 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47054 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47066 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:47038 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47042 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47042 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47038 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50418 - "OPTIONS /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50418 - "POST /upload/ HTTP/1.1" 200 OK
+2025-11-17 09:40:42,757 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 01:10:42.757510
+INFO:     127.0.0.1:52138 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52138 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52138 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52138 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52138 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41972 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41972 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36936 - "OPTIONS /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36936 - "POST /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36936 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-17 09:46:10,728 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 01:16:10.728626
+INFO:     127.0.0.1:36952 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36952 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36952 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-17 09:46:11,725 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:36952 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-17 09:46:14,835 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:36952 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-17 09:46:14,855 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:36952 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:36060 - "POST /api/account-info/avatar HTTP/1.1" 200 OK
+2025-11-17 09:47:51,763 - app.core.config - ERROR - 数据库操作出错: [{'type': 'int_parsing', 'loc': ('body', 'age'), 'msg': 'Input should be a valid integer, unable to parse string as an integer', 'input': ''}]
+INFO:     127.0.0.1:36060 - "POST /api/account-info/ HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:48412 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48412 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48420 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48420 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48412 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48434 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48450 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56284 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56284 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56290 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56290 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56284 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56304 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:41698 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41698 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "POST /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51524 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51524 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52248 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52254 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51512 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52264 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52264 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33620 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33620 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38718 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38718 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38718 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38718 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38728 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:57504 - "OPTIONS /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57504 - "POST /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57504 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57504 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34008 - "GET /api/account-info/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34008 - "GET /api/account-info/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34008 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34008 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34222 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:34008 - "GET /api/account-info/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34008 - "GET /api/account-info/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34008 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34008 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34008 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34008 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34008 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34008 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:45032 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-17 10:00:57,052 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 01:30:57.052031
+INFO:     127.0.0.1:45032 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45032 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45032 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45032 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45048 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:45032 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45032 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45032 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45032 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45038 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45038 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39556 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:39562 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55754 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55760 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55754 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55760 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55760 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55760 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55760 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55754 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55754 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55760 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55764 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55776 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55760 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55754 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55754 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55760 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48896 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-17 12:05:05,363 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 03:35:05.362596
+INFO:     127.0.0.1:48896 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48896 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48896 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48896 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48910 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48912 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+2025-11-17 12:05:19,719 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 03:35:19.719185
+INFO:     127.0.0.1:43198 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43198 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43198 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43212 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:43198 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43224 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43198 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43224 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46028 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46028 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46028 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46034 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46028 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46034 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46036 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:46034 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46034 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46034 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46034 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43850 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43852 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+2025-11-17 12:50:29,347 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-17 12:50:29,347 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:43852 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+2025-11-17 12:50:29,350 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-17 12:50:29,350 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:43850 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34918 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-17 12:50:42,302 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 04:20:42.302257
+INFO:     127.0.0.1:34918 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34918 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34918 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34918 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34932 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34942 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:34918 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34918 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34918 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34918 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34918 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34918 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38162 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38162 - "POST /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38162 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38174 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38174 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38162 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38176 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:38190 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52062 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52064 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52062 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52064 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52064 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52062 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52062 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52064 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52064 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52062 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52062 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52064 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38090 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38094 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+2025-11-17 13:26:19,750 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-17 13:26:19,750 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:38094 - "GET /api/account-info/ HTTP/1.1" 401 Unauthorized
+2025-11-17 13:26:19,752 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-17 13:26:19,752 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:38090 - "GET /api/account-info/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:35014 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-17 13:26:35,061 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 04:56:35.061055
+INFO:     127.0.0.1:35014 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35014 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35014 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35014 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51024 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:35022 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51028 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35022 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51028 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51028 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51028 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51028 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35022 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35022 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51028 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51038 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51054 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:48346 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48362 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48346 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48362 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36444 - "OPTIONS /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36444 - "POST /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36444 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-17 13:40:33,732 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 05:10:33.732677
+INFO:     127.0.0.1:36460 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36460 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36460 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36460 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+2025-11-17 13:40:35,638 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:36444 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:36460 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36460 - "GET /api/account-info/users HTTP/1.1" 200 OK
+2025-11-17 13:40:41,993 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:36460 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-17 13:40:42,000 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:36460 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46572 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46584 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46572 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46584 - "GET /upload/list HTTP/1.1" 200 OK
+2025-11-17 13:40:50,396 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:46584 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-17 13:40:50,408 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:46584 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46584 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46584 - "GET /api/account-info/users HTTP/1.1" 200 OK
+2025-11-17 13:43:18,467 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 05:13:18.466884
+INFO:     127.0.0.1:32938 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32938 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-17 13:43:19,755 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:32938 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59068 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59080 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+2025-11-17 14:42:31,360 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-17 14:42:31,360 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:59080 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+2025-11-17 14:42:31,363 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-17 14:42:31,363 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:59068 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50688 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-17 14:42:49,431 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 06:12:49.431231
+INFO:     127.0.0.1:50688 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50688 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50688 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50688 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50704 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50718 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50688 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50704 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50704 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50688 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50718 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50732 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50688 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50688 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36042 - "OPTIONS /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36042 - "POST /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36042 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36042 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43064 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43068 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43068 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43064 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43068 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43064 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43064 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43068 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52818 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+2025-11-17 15:39:35,368 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-17 15:39:35,368 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:52818 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+2025-11-17 15:39:35,370 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-17 15:39:35,371 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:52802 - "GET /upload/list HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:47848 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-17 17:24:22,584 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 08:54:22.582267
+INFO:     127.0.0.1:47848 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47848 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47848 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47848 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47862 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47868 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:47848 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47848 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47848 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47862 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47862 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47848 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47868 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54674 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:49190 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49190 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49190 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49192 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49190 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49192 - "GET /upload/list HTTP/1.1" 200 OK
+2025-11-17 17:34:09,899 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-17 09:04:09.898769
+INFO:     127.0.0.1:43478 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43478 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-17 17:34:11,417 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:43478 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:43478 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43478 - "GET /api/account-info/users HTTP/1.1" 200 OK
+2025-11-17 17:34:16,368 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:43478 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-17 17:34:16,377 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:43478 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:43478 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43478 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35560 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-18 09:44:46,362 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-18 01:14:46.357308
+INFO:     127.0.0.1:35560 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35560 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35560 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35560 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35562 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35564 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:35560 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35562 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35560 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35562 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35560 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35560 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35560 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35562 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35560 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35562 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35564 - "GET /uploads/avatars/user_1_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:35576 - "GET /uploads/avatars/user_3_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59686 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59686 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59686 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59686 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59686 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59686 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58538 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58550 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+2025-11-18 10:24:32,223 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-18 10:24:32,225 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:58550 - "GET /auth/me HTTP/1.1" 401 Unauthorized
+2025-11-18 10:24:32,238 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-18 10:24:32,238 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:58538 - "GET /auth/me HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:47446 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-18 10:24:39,804 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-18 01:54:39.804342
+INFO:     127.0.0.1:47446 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47446 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47446 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47458 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47446 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47458 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47458 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47446 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59394 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59394 - "GET /upload/list HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'app/routes/upload.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [4558]
+2025-11-18 10:26:38,612 - app.core.config - INFO - 数据库连接: postgresql+psycopg2://t9413128:***@localhost:5433/db1
+INFO:     Started server process [103126]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app/routes/upload.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [103126]
+2025-11-18 10:27:33,594 - app.core.config - INFO - 数据库连接: postgresql+psycopg2://t9413128:***@localhost:5433/db1
+INFO:     Started server process [103212]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:56856 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56848 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56856 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56848 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56848 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56848 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48130 - "OPTIONS /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48130 - "POST /upload/ HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:37754 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37754 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37754 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37768 - "GET /api/account-info/ HTTP/1.1" 200 OK
+2025-11-18 10:28:46,416 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-11-18 10:28:47,755 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-18 01:58:47.755154
+INFO:     127.0.0.1:33714 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33714 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33714 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34744 - "POST /upload/ HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'app/routes/upload.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [103212]
+2025-11-18 10:30:43,283 - app.core.config - INFO - 数据库连接: postgresql+psycopg2://t9413128:***@localhost:5433/db1
+INFO:     Started server process [103338]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app/routes/upload.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [103338]
+2025-11-18 10:30:47,518 - app.core.config - INFO - 数据库连接: postgresql+psycopg2://t9413128:***@localhost:5433/db1
+INFO:     Started server process [103360]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2025-11-18 10:33:00,087 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:     127.0.0.1:55766 - "POST /auth/register HTTP/1.1" 200 OK
+2025-11-18 10:33:01,778 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-18 02:03:01.767934
+INFO:     127.0.0.1:55770 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55786 - "POST /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59710 - "POST /upload/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:42308 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42308 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42320 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42308 - "GET /api/account-info/ HTTP/1.1" 200 OK
+2025-11-18 10:34:30,778 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-18 02:04:30.778031
+INFO:     127.0.0.1:58170 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58170 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58170 - "GET /api/account-info/ HTTP/1.1" 200 OK
+2025-11-18 10:34:37,779 - app.routes.upload - ERROR - Upload failed: (psycopg2.errors.StringDataRightTruncation) value too long for type character varying(50)
+
+[SQL: INSERT INTO files (filename, path, user_id, file_size, file_type, created_at, updated_at) VALUES (%(filename)s, %(path)s, %(user_id)s, %(file_size)s, %(file_type)s, %(created_at)s, %(updated_at)s) RETURNING files.id]
+[parameters: {'filename': '【図書管理】_Sample.xlsx', 'path': 'uploads/【図書管理】_Sample.xlsx', 'user_id': 3, 'file_size': 17857, 'file_type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'created_at': datetime.datetime(2025, 11, 18, 1, 34, 37, 734654), 'updated_at': datetime.datetime(2025, 11, 18, 1, 34, 37, 734665)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Traceback (most recent call last):
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(50)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/t9413128/loginaccountsystem/backend/app/routes/upload.py", line 57, in upload_file
+    db.commit()
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1311, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1286, in _prepare_impl
+    self.session.flush()
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4331, in flush
+    self._flush(objects)
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4466, in _flush
+    with util.safe_reraise():
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4427, in _flush
+    flush_context.execute()
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.StringDataRightTruncation) value too long for type character varying(50)
+
+[SQL: INSERT INTO files (filename, path, user_id, file_size, file_type, created_at, updated_at) VALUES (%(filename)s, %(path)s, %(user_id)s, %(file_size)s, %(file_type)s, %(created_at)s, %(updated_at)s) RETURNING files.id]
+[parameters: {'filename': '【図書管理】_Sample.xlsx', 'path': 'uploads/【図書管理】_Sample.xlsx', 'user_id': 3, 'file_size': 17857, 'file_type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'created_at': datetime.datetime(2025, 11, 18, 1, 34, 37, 734654), 'updated_at': datetime.datetime(2025, 11, 18, 1, 34, 37, 734665)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+
+INFO:     127.0.0.1:44478 - "POST /upload/ HTTP/1.1" 500 Internal Server Error
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [103360]
+INFO:     Stopping reloader process [4555]

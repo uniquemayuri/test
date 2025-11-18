@@ -1,0 +1,103 @@
+2025-11-14 17:19:43,479 - app.core.config - INFO - 数据库连接: postgresql+psycopg2://t9413128:***@localhost:5433/db1
+INFO:     Started server process [95965]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:43072 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43080 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+2025-11-14 17:20:10,398 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-14 17:20:10,398 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:43072 - "GET /auth/me HTTP/1.1" 401 Unauthorized
+2025-11-14 17:20:10,405 - app.core.security - WARNING - 令牌验证失败: Signature has expired.
+2025-11-14 17:20:10,405 - app.core.security - WARNING - 令牌验证失败
+INFO:     127.0.0.1:43072 - "GET /auth/me HTTP/1.1" 401 Unauthorized
+2025-11-14 17:20:18,519 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/t9413128/loginaccountsystem/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-11-14 17:20:18,765 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-14 08:50:18.765215
+INFO:     127.0.0.1:43090 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43090 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43090 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+2025-11-14 17:20:19,767 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:43090 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:20:22,965 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:43090 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:20:22,973 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:43090 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58296 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58296 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-14 17:29:25,727 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:58298 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:29:25,735 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:58298 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49622 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49632 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49632 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49622 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49632 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-14 17:31:24,998 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:49622 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:31:25,012 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:49622 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51418 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51418 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-14 17:34:07,519 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:51434 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:34:07,529 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:51434 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48208 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-14 17:34:24,740 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-14 09:04:24.740520
+INFO:     127.0.0.1:48208 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48208 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-14 17:34:26,318 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:48208 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:34:29,843 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:48208 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:34:29,852 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:48208 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48184 - "OPTIONS /api/account-info/avatar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48184 - "POST /api/account-info/avatar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48184 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48184 - "PUT /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48950 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48954 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48950 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48950 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48956 - "GET /uploads/avatars/user_2_images.jpg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47316 - "OPTIONS /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47316 - "POST /auth/register HTTP/1.1" 200 OK
+2025-11-14 17:36:18,484 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-14 09:06:18.484780
+INFO:     127.0.0.1:47322 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47322 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-14 17:36:19,771 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:47322 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47322 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47322 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57204 - "GET /uploads/avatars/user_2_images.jpg HTTP/1.1" 304 Not Modified
+2025-11-14 17:36:24,377 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:47322 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:36:24,385 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:47322 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:36:25,910 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:47322 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:36:25,918 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:47322 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35348 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35348 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-14 17:37:14,769 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:35360 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:37:14,778 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:35360 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:37:19,733 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:35360 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-14 17:37:19,741 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:35360 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38764 - "POST /api/account-info/avatar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38764 - "PUT /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38764 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38764 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54352 - "GET /uploads/avatars/user_3_images%20%281%29.jpg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54368 - "GET /uploads/avatars/user_2_images.jpg HTTP/1.1" 304 Not Modified
