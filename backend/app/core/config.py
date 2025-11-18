@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 # ==================== 环境变量配置 ====================
 DB_USER = os.getenv("DB_USER", "t9413128")
 # PostgreSQL 5433 是 Docker 容器，密码已在容器中设置为 TestPass123
-DB_PASSWORD = os.getenv("DB_PASSWORD", "TestPass123")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "Mm620102")
 DB_HOST = os.getenv("DB_HOST", "127.0.0.1")
 DB_PORT = os.getenv("DB_PORT", "5433")
 DB_NAME = os.getenv("DB_NAME", "db1")
