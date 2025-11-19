@@ -11,15 +11,15 @@ const Register: React.FC = () => {
 
   const handleRegister = async () => {
     if (!username || !email || !password) {
-      alert("すべてのフィールドを入力してください。");
+      alert("全ての項目を入力してください。");
       return;
     }
     if (password.length < 8) {
-      alert("パスワードは8文字以上である必要があります。");
+      alert("パスワードは8文字以上で入力してください。");
       return;
     }
     if (new TextEncoder().encode(password).length > 72) {
-      alert("パスワードは72バイト以下である必要があります");
+      alert("パスワードは72バイト以下で入力してください。");
       return;
     }
 
@@ -33,11 +33,15 @@ const Register: React.FC = () => {
       const loginRes = await api.post("/auth/login", { email, password });
       localStorage.setItem('token', loginRes.data.access_token);
       if ((window as any).refreshHeader) (window as any).refreshHeader();
-      alert("登録成功、ログインしました。");
+      alert("登録が完了し、ログインしました。");
       navigate('/upload');
     } catch (error: any) {
       const detail = error.response?.data?.detail || "エラーが発生しました";
-      alert(`登録失敗: ${detail}`);
+      let msg = "登録に失敗しました。";
+      if (detail === "Email already registered") msg = "このメールアドレスは既に登録されています。";
+      else if (detail === "Password too long (max 72 bytes)") msg = "パスワードは72バイト以下で入力してください。";
+      else if (detail) msg = `エラー: ${detail}`;
+      alert(msg);
     }
   };
 

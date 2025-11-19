@@ -1,82 +1,117 @@
 nohup: ignoring input
 INFO:     Will watch for changes in these directories: ['/home/t9413128/loginaccountsystem/backend']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [8580] using StatReload
-2025-11-19 10:29:18,947 - app.core.config - INFO - 数据库连接: postgresql+psycopg2://t9413128:***@127.0.0.1:5432/db1
-INFO:     Started server process [8583]
+INFO:     Started reloader process [18717] using StatReload
+2025-11-19 11:18:03,188 - app.core.config - INFO - 数据库连接: postgresql+psycopg2://t9413128:***@127.0.0.1:5432/db1
+INFO:     Started server process [18725]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     127.0.0.1:52536 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44882 - "OPTIONS /auth/login HTTP/1.1" 200 OK
-2025-11-19 10:36:27,431 - app.routes.auth - INFO - Login attempt: email=test@try01.com
-2025-11-19 10:36:27,458 - app.routes.auth - WARNING - Login failed for email=test@try01.com: user_found=False
-INFO:     127.0.0.1:44882 - "POST /auth/login HTTP/1.1" 401 Unauthorized
-2025-11-19 10:36:32,888 - app.routes.auth - INFO - Login attempt: email=test@try01.com
-2025-11-19 10:36:32,893 - app.routes.auth - WARNING - Login failed for email=test@try01.com: user_found=False
-INFO:     127.0.0.1:44894 - "POST /auth/login HTTP/1.1" 401 Unauthorized
-2025-11-19 10:36:58,281 - app.routes.auth - INFO - Login attempt: email=test@try01.com
-2025-11-19 10:36:58,287 - app.routes.auth - WARNING - Login failed for email=test@try01.com: user_found=False
-INFO:     127.0.0.1:49490 - "POST /auth/login HTTP/1.1" 401 Unauthorized
-INFO:     127.0.0.1:42174 - "OPTIONS /auth/register HTTP/1.1" 200 OK
-2025-11-19 10:41:06,803 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+2025-11-19 11:18:21,981 - app.routes.auth - INFO - Login attempt: email=no-such-user@example.com
+2025-11-19 11:18:22,016 - app.routes.auth - WARNING - Login failed - user not found: email=no-such-user@example.com
+INFO:     127.0.0.1:59990 - "POST /auth/login HTTP/1.1" 404 Not Found
+2025-11-19 11:18:22,070 - app.routes.auth - INFO - Login attempt: email=user01
+2025-11-19 11:18:22,079 - app.routes.auth - WARNING - Login failed - user not found: email=user01
+INFO:     127.0.0.1:60000 - "POST /auth/login HTTP/1.1" 404 Not Found
+2025-11-19 11:18:22,148 - app.routes.auth - INFO - Login attempt: email=test@test.com
+2025-11-19 11:18:22,164 - app.routes.auth - WARNING - Login failed - user not found: email=test@test.com
+INFO:     127.0.0.1:60012 - "POST /auth/login HTTP/1.1" 404 Not Found
+2025-11-19 11:18:30,914 - app.routes.auth - INFO - Login attempt: email=no-such-user@example.com
+2025-11-19 11:18:30,920 - app.routes.auth - WARNING - Login failed - user not found: email=no-such-user@example.com
+INFO:     127.0.0.1:38272 - "POST /auth/login HTTP/1.1" 404 Not Found
+2025-11-19 11:18:40,844 - app.routes.auth - INFO - Login attempt: email=user01
+2025-11-19 11:18:40,851 - app.routes.auth - WARNING - Login failed - user not found: email=user01
+INFO:     127.0.0.1:52410 - "POST /auth/login HTTP/1.1" 404 Not Found
+2025-11-19 11:18:58,569 - app.routes.auth - INFO - Login attempt: email=test@try01.com
+2025-11-19 11:18:58,576 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/t9413128/loginaccountsystem/backend/.venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
-INFO:     127.0.0.1:42174 - "POST /auth/register HTTP/1.1" 200 OK
-2025-11-19 10:41:07,489 - app.routes.auth - INFO - Login attempt: email=test@try01.com
-2025-11-19 10:41:07,945 - app.routes.auth - INFO - Login successful for email=test@try01.com
-2025-11-19 10:41:07,951 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-19 02:11:07.945617
-INFO:     127.0.0.1:42174 - "POST /auth/login HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42174 - "OPTIONS /auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42174 - "GET /auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42174 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
-2025-11-19 10:41:09,161 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
-INFO:     127.0.0.1:42188 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
-2025-11-19 10:41:11,253 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
-INFO:     127.0.0.1:42174 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
-2025-11-19 10:41:11,276 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
-INFO:     127.0.0.1:42174 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:34062 - "OPTIONS /api/account-info/avatar HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34062 - "POST /api/account-info/avatar HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34062 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "POST /api/account-info/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34062 - "OPTIONS /upload/list HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "OPTIONS /upload/list HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34062 - "GET /upload/list HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "GET /upload/list HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "OPTIONS /upload/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "POST /upload/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "GET /upload/list HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "GET /upload/list HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "POST /upload/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "GET /upload/list HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "GET /upload/list HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37764 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34074 - "GET /api/account-info/users HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37764 - "GET /api/account-info/users HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37776 - "GET /uploads/avatars/user_1_images%20%283%29.jpg HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54332 - "POST /auth/register HTTP/1.1" 200 OK
-2025-11-19 10:41:47,315 - app.routes.auth - INFO - Login attempt: email=test@try02.com
-2025-11-19 10:41:47,813 - app.routes.auth - INFO - Login successful for email=test@try02.com
-2025-11-19 10:41:47,814 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-19 02:11:47.813910
-INFO:     127.0.0.1:54332 - "POST /auth/login HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54332 - "GET /auth/me HTTP/1.1" 200 OK
-2025-11-19 10:41:48,900 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
-INFO:     127.0.0.1:54332 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:54332 - "POST /upload/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54332 - "GET /api/account-info/users HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54332 - "GET /api/account-info/users HTTP/1.1" 200 OK
-2025-11-19 10:41:56,639 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
-INFO:     127.0.0.1:54332 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
-2025-11-19 10:41:56,655 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
-INFO:     127.0.0.1:54332 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:57648 - "POST /api/account-info/avatar HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57648 - "POST /api/account-info/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57648 - "GET /upload/list HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57648 - "GET /upload/list HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57648 - "GET /api/account-info/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57648 - "GET /api/account-info/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57658 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 200 OK
+2025-11-19 11:18:59,411 - app.routes.auth - WARNING - Login failed - incorrect password for email=test@try01.com
+INFO:     127.0.0.1:40650 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+2025-11-19 11:19:07,225 - app.routes.auth - INFO - Login attempt: email=test@try01.com
+2025-11-19 11:19:07,965 - app.routes.auth - WARNING - Login failed - incorrect password for email=test@try01.com
+INFO:     127.0.0.1:49126 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+2025-11-19 11:19:14,626 - app.routes.auth - INFO - Login attempt: email=no-such-user@example.com
+2025-11-19 11:19:14,631 - app.routes.auth - WARNING - Login failed - user not found: email=no-such-user@example.com
+INFO:     127.0.0.1:55608 - "POST /auth/login HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:39766 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39774 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39766 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39774 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39766 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39774 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39788 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39788 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39790 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:40496 - "OPTIONS /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40496 - "POST /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40496 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-19 11:21:35,643 - app.routes.auth - INFO - Login attempt: email=alice@example.com
+2025-11-19 11:21:36,138 - app.routes.auth - INFO - Login successful for email=alice@example.com
+2025-11-19 11:21:36,138 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-19 02:51:36.138565
+INFO:     127.0.0.1:40508 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40508 - "GET /auth/me HTTP/1.1" 200 OK
+2025-11-19 11:21:37,547 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:40508 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-19 11:21:41,696 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:40508 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+2025-11-19 11:21:41,715 - app.core.config - ERROR - 数据库操作出错: 404: 账户信息未找到
+INFO:     127.0.0.1:40508 - "GET /api/account-info/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33924 - "OPTIONS /api/account-info/avatar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33924 - "POST /api/account-info/avatar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33924 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33932 - "POST /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33932 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33924 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33924 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33932 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33946 - "GET /uploads/avatars/user_3_images%20%282%29.jpg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33952 - "GET /uploads/avatars/user_1_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:33932 - "OPTIONS /api/account-info/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33932 - "GET /api/account-info/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33932 - "OPTIONS /api/account-info/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33932 - "GET /api/account-info/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33932 - "OPTIONS /api/account-info/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33932 - "GET /api/account-info/3 HTTP/1.1" 200 OK
+2025-11-19 11:23:03,721 - app.routes.auth - INFO - Login attempt: email=alice@example.com
+2025-11-19 11:23:04,248 - app.routes.auth - WARNING - Login failed - incorrect password for email=alice@example.com
+INFO:     127.0.0.1:41442 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+2025-11-19 11:25:02,500 - app.routes.auth - INFO - Login attempt: email=alice@ex
+2025-11-19 11:25:02,503 - app.routes.auth - WARNING - Login failed - user not found: email=alice@ex
+INFO:     127.0.0.1:51476 - "POST /auth/login HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59672 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2025-11-19 11:35:02,589 - app.routes.auth - INFO - Login attempt: email=123
+2025-11-19 11:35:02,595 - app.routes.auth - WARNING - Login failed - user not found: email=123
+INFO:     127.0.0.1:59672 - "POST /auth/login HTTP/1.1" 404 Not Found
+2025-11-19 11:35:07,850 - app.routes.auth - INFO - Login attempt: email=test@try01.com
+2025-11-19 11:35:08,359 - app.routes.auth - WARNING - Login failed - incorrect password for email=test@try01.com
+INFO:     127.0.0.1:59676 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+2025-11-19 11:35:14,438 - app.routes.auth - INFO - Login attempt: email=test@try01.com
+2025-11-19 11:35:14,853 - app.routes.auth - INFO - Login successful for email=test@try01.com
+2025-11-19 11:35:14,853 - app.core.security - INFO - 令牌已生成，过期时间: 2025-11-19 03:05:14.853184
+INFO:     127.0.0.1:51766 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51766 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51766 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51766 - "OPTIONS /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51778 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51788 - "GET /uploads/avatars/user_1_images%20%283%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:33532 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "OPTIONS /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33532 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "GET /upload/list HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "GET /api/account-info/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33532 - "OPTIONS /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33532 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "GET /api/account-info/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33558 - "GET /uploads/avatars/user_2_images%20%281%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:33568 - "GET /uploads/avatars/user_3_images%20%282%29.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:33542 - "OPTIONS /api/account-info/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "GET /api/account-info/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "OPTIONS /api/account-info/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "GET /api/account-info/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "OPTIONS /api/account-info/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33542 - "GET /api/account-info/2 HTTP/1.1" 200 OK

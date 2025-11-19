@@ -105,3 +105,14 @@ def list_users(request: Request, db: Session = Depends(get_db)):
             avatar = f"{base}/uploads/avatars/{info.avatar_filename}"
         result.append({"id": u.id, "username": u.username, "avatar_url": avatar})
     return {"users": result}
+
+
+@router.get('/{user_id}', response_model=AccountInfoResponse)
+def get_account_info_by_user(user_id: int, request: Request, db: Session = Depends(get_db)):
+    """公开接口：根据用户 ID 返回该用户的账户信息（不需要登录）"""
+    info = db.query(AccountInfo).filter(AccountInfo.user_id == user_id).first()
+    if not info:
+        raise HTTPException(status_code=404, detail="账户信息未找到")
+
+    # 如果有头像文件名，客户端可以拼接 URL 使用
+    return info

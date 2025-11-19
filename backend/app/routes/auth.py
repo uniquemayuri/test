@@ -45,9 +45,13 @@ async def register(data: RegisterRequest, db: Session = Depends(get_db)):
 async def login(data: LoginRequest, db: Session = Depends(get_db)):
     logger.info(f"Login attempt: email={data.email}")
     user = db.query(User).filter(User.email == data.email).first()
-    if not user or not verify_password(data.password, user.hashed_password):
-        logger.warning(f"Login failed for email={data.email}: user_found={user is not None}")
-        raise HTTPException(status_code=401, detail="Invalid credentials")
+    if not user:
+        logger.warning(f"Login failed - user not found: email={data.email}")
+        raise HTTPException(status_code=404, detail="User not found")
+
+    if not verify_password(data.password, user.hashed_password):
+        logger.warning(f"Login failed - incorrect password for email={data.email}")
+        raise HTTPException(status_code=401, detail="Incorrect password")
     logger.info(f"Login successful for email={data.email}")
     token = create_access_token({"sub": user.email})
     return {"access_token": token, "token_type": "bearer"}

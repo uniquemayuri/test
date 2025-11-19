@@ -21,3 +21,86 @@ To create a production build, use npm run build.
 
 webpack compiled successfully
 No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/UserList.tsx
+  Line 8:22:   'setExpandedId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 9:19:   'setDetails' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 10:21:  'setLoadingId' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  Line 79:16:  'fetchUserDetails' is defined but never used        @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/UserList.tsx
+  Line 8:22:   'setExpandedId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 9:19:   'setDetails' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 10:21:  'setLoadingId' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  Line 79:16:  'fetchUserDetails' is defined but never used        @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+Files successfully emitted, waiting for typecheck results...
+Issues checking in progress...
+ERROR in src/pages/UserList.tsx:35:36
+TS2304: Cannot find name 'handleToggle'.
+    33 |                 <Box sx={{position:'relative'}}>
+    34 |                   <IconButton
+  > 35 |                     onClick={() => handleToggle(u.id)}
+       |                                    ^^^^^^^^^^^^
+    36 |                     sx={{position:'absolute', right:-6, top:-6, zIndex:2}}
+    37 |                     aria-label="expand"
+    38 |                   >
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/UserList.tsx
+  Line 8:22:   'setExpandedId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 9:19:   'setDetails' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 10:21:  'setLoadingId' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  Line 79:16:  'fetchUserDetails' is defined but never used        @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/UserList.tsx
+  Line 8:22:   'setExpandedId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 9:19:   'setDetails' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 10:21:  'setLoadingId' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  Line 79:16:  'fetchUserDetails' is defined but never used        @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/UserList.tsx:35:36
+TS2304: Cannot find name 'handleToggle'.
+    33 |                 <Box sx={{position:'relative'}}>
+    34 |                   <IconButton
+  > 35 |                     onClick={() => handleToggle(u.id)}
+       |                                    ^^^^^^^^^^^^
+    36 |                     sx={{position:'absolute', right:-6, top:-6, zIndex:2}}
+    37 |                     aria-label="expand"
+    38 |                   >
+
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Files successfully emitted, waiting for typecheck results...
+Issues checking in progress...
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
