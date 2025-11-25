@@ -1,0 +1,26 @@
+# Python/FastAPI
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.sqlite3
+
+# Node/React
+node_modules/
+dist/
+build/
+.env
+*.log
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# VSCode
+.vscode/
+.history/
+
+# OS
+.DS_Store
+Thumbs.db
